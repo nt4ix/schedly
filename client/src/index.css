@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add padding to main content for fixed navbar */
+body {
+  padding-top: 80px; /* Adjust based on navbar height */
+}
+
+:root {
+  /* Base colors */
+  --background: 120 40% 20%; /* Green background for the entire site */
+  --foreground: 0 0% 100%; /* White text */
+  --muted: 120 15% 30%;
+  --muted-foreground: 0 0% 85%;
+  
+  /* Containers */
+  --popover: 0 0% 100%;
+  --popover-foreground: 120 40% 20%;
+  --card: 0 0% 100%; /* White card background */
+  --card-foreground: 120 40% 25%; /* Dark green text on white cards */
+  
+  /* UI Elements */
+  --border: 0 0% 90%;
+  --input: 0 0% 95%;
+  
+  /* Primary - Green */
+  --primary: 120 55% 40%; /* The main green color */
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary - Dark Green */
+  --secondary: 120 50% 25%;
+  --secondary-foreground: 0 0% 100%;
+  
+  /* Accent - Light Green */
+  --accent: 120 70% 90%;
+  --accent-foreground: 120 50% 25%;
+  
+  /* States */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --ring: 120 55% 40%;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Base colors */
+  --background: 120 40% 15%; /* Darker green background for dark mode */
+  --foreground: 0 0% 98%;
+  --muted: 120 15% 25%;
+  --muted-foreground: 0 0% 80%;
+  
+  /* Containers */
+  --popover: 120 40% 15%;
+  --popover-foreground: 0 0% 98%;
+  --card: 0 0% 10%; /* Dark card background */
+  --card-foreground: 0 0% 98%; /* Light text on dark cards */
+  
+  /* UI Elements */
+  --border: 120 15% 25%;
+  --input: 120 15% 25%;
+  
+  /* Primary - Bright Green */
+  --primary: 120 55% 50%; /* Brighter in dark mode */
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary - Lighter Green */
+  --secondary: 120 40% 40%;
+  --secondary-foreground: 0 0% 98%;
+  
+  /* Accent - Dark Green */
+  --accent: 120 50% 20%;
+  --accent-foreground: 120 70% 90%;
+  
+  /* States */
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 120 55% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground min-h-screen overflow-x-hidden;
+  }
+
+  /* Improved focus styles */
+  a:focus-visible, 
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+.slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.slide-right {
+  animation: slideRight 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.slide-left {
+  animation: slideLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.bounce-in {
+  animation: bounceIn 0.7s cubic-bezier(0.28, 0.84, 0.42, 1);
+  will-change: transform, opacity;
+}
+
+/* Staggered delay animations */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(40px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  40% { transform: scale(1.1); }
+  70% { transform: scale(0.95); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Hover animations */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.2);
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+

@@ -1,0 +1,189 @@
+Here’s a full, detailed description of the Schedly Home Page — from top to bottom — designed for web, focused on conversion, clear messaging, and engaging visuals.
+
+🌍 Schedly Home Page (Landing Page)
+URL: /
+
+Goal: Quickly communicate Schedly’s core value — smart, time zone-aware scheduling — and drive users to sign up or learn more.
+
+🟦 1. Navigation Bar (Sticky Header)
+Logo (Left): “Schedly” logo — clicking it returns to /
+
+Menu Links (Right):
+
+Features → /features
+
+Pricing → /pricing
+
+Blog → /blog
+
+Contact → /contact
+
+Login → /login (button-style)
+
+Sign Up → /signup (highlighted primary CTA)
+
+Sticky on scroll, with slight shadow for visibility.
+
+🟨 2. Hero Section
+Purpose: Deliver the first impression and capture attention.
+
+Left Side (Text Content):
+Headline:
+
+Effortless Scheduling Across Time Zones
+
+Subheadline:
+
+No more back-and-forth emails. Instantly book meetings with smart availability detection and timezone syncing.
+
+Call to Action Buttons:
+
+Try Schedly for Free (primary – scrolls to sign-up or modal)
+
+See How It Works (secondary – scrolls to explainer/video)
+
+Right Side (Visual Content):
+Animated illustration or looping screen capture of Schedly’s dashboard in action (made using Hera.ai)
+
+Shows scheduling flow, time zone auto-detection, and instant meeting link generation
+
+🟩 3. Trust & Integration Logos
+Line of logos to build trust (real or placeholders):
+
+“Trusted by remote teams worldwide”
+
+Logos: Google Calendar, Outlook, Zoom, Microsoft Teams, etc.
+
+🟦 4. Feature Highlights (3–4 Cards)
+Heading: Why Choose Schedly?
+
+Card Layout (with icons/animations):
+
+Automatic Time Zone Adjustment
+→ Meetings convert automatically based on each participant’s location.
+
+Smart Scheduling Links
+→ Share a link; Schedly handles conflicts, double-booking, and preferences.
+
+Calendar Syncing
+→ Integrates with Google, Outlook, and Apple calendars to avoid overlaps.
+
+Group Meeting Support
+→ Find mutual availability with multiple attendees without manual coordination.
+
+Each card has:
+
+Icon/graphic
+
+Title
+
+One-liner description
+
+🟧 5. How It Works Preview
+Heading: Here’s How Schedly Works
+
+Subheading: Scheduling made simple in just a few steps.
+
+Step-by-step icons or mini-infographic:
+
+Connect your calendar
+
+Set availability
+
+Share your link
+
+Let attendees book without the confusion
+
+CTA under it: Explore Features → /features
+
+🎬 6. Explainer Video (Optional)
+Heading: See Schedly in Action
+
+Embed or autoplay muted video (30–60 seconds) created with Hera.ai
+
+Shows full scheduling workflow
+
+CTA below: Start Scheduling Smarter
+
+🟨 7. Testimonials Section
+Heading: What Our Users Say
+
+2–3 quote cards with:
+
+User photo/avatar
+
+Name, role, company
+
+Short quote: “Schedly saved hours every week...” etc.
+
+Optionally animate these in a carousel
+
+🟫 8. Pricing Preview
+Heading: Flexible Plans for Everyone
+
+Short 3-column preview of:
+
+Free
+
+Pro
+
+Team
+
+Each with:
+
+Price
+
+Core features
+
+CTA → “Compare Plans” → /pricing
+
+🟥 9. Final CTA Banner (Sticky or Footer Area)
+Background: Colorful, eye-catching block
+
+Text:
+“Ready to simplify your scheduling?”
+
+Button:
+Create Your Free Account
+
+⚫ 10. Footer
+Navigation Links:
+
+About
+
+Features
+
+Pricing
+
+Blog
+
+Contact
+
+Privacy Policy
+
+Terms of Service
+
+Newsletter Signup Field:
+
+“Stay up to date with scheduling tips.”
+
+Email field + Subscribe button
+
+Social Media Icons:
+
+LinkedIn, Twitter, Instagram, Facebook
+
+Copyright:
+© 2025 Schedly. All rights reserved.
+
+🔧 Technical Suggestions:
+Use Framer Motion or GSAP for smooth animations/transitions
+
+Animate headline + buttons on load for engagement
+
+Prioritize lazy loading assets and video for performance
+
+Use responsive grid layout for cards and testimonials
+
+Make all CTAs trackable for analytics (Google Analytics, Plausible, etc.)
+

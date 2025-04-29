@@ -1,0 +1,253 @@
+🌐 Schedly Full Website & Onboarding Breakdown
+✅ 1. Landing Page (Home)
+Purpose: Introduce the product, communicate the value prop, and get users to sign up or explore more.
+
+Sections:
+Hero Section
+
+Headline: “Effortless Scheduling Across Time Zones”
+
+Subheadline: “Smart meetings, zero confusion.”
+
+CTA Buttons:
+
+"Try for Free" → leads to sign-up
+
+"See How It Works" → scrolls to explainer section
+
+Visual: Animated graphic or looping screen demo of Schedly
+
+Features Preview (Teasers)
+
+Icons + short descriptions for 3 features: Timezone Sync, Group Scheduling, Instant Links
+
+CTA: “Explore All Features” → navigates to /features
+
+Explainer Video/Animation
+
+Optional Hera.ai or embedded demo
+
+Captioned walkthrough
+
+Testimonials/Logos
+
+Real or placeholder quotes
+
+Brand trust logos (if available)
+
+Pricing Snippet
+
+Small preview of Free/Pro/Team pricing
+
+CTA: “View All Plans” → /pricing
+
+Footer
+
+Navigation: About, Contact, Privacy, TOS, Blog
+
+Social media icons
+
+Email subscription field
+
+🧩 2. Sign-Up / Login Page
+Routes:
+
+/signup
+
+/login
+
+UI Elements:
+Email, Password fields (OAuth with Google/Outlook if supported)
+
+Simple form validation (password length, email format)
+
+Toggle: "Already have an account? Log in"
+
+CTA Button: “Continue” or “Create Account”
+
+Show loading state + error handling
+
+Post-Sign-Up Flow:
+Once the user signs up → redirect to /onboarding
+
+🚀 3. Onboarding Flow (Multi-Step)
+Route: /onboarding
+
+Purpose: Guide new users through setup. Should take 3–4 steps.
+
+Step 1: Connect Calendar
+UI: Cards/buttons for "Connect Google Calendar", "Connect Outlook", or "Skip for Now"
+
+On connection, store auth token securely via backend
+
+Skip still allows scheduling but with limited functionality
+
+Continue → Step 2
+
+Step 2: Set Availability
+UI: Weekly calendar view (Mon–Sun with time slots)
+
+Let users select default time ranges for availability
+
+Add timezone detection + manual override
+
+Continue → Step 3
+
+Step 3: Meeting Preferences
+Choose default meeting length: 15/30/60 min
+
+Default buffer time: none / 5 / 10 mins
+
+Allow selection of platform preference: Google Meet / Zoom / Custom
+
+Continue → Step 4
+
+Step 4: Personalize & Finalize
+Upload profile picture (optional)
+
+Add full name, company (optional)
+
+Generate a unique meeting link: schedly.com/yourname
+
+CTA: “Go to Dashboard”
+
+🧭 4. User Dashboard (/dashboard)
+Purpose: Main interface to manage meetings, availability, and links.
+
+Sections:
+Upcoming Meetings Panel
+
+Cards showing next scheduled meetings
+
+Time zone aware display
+
+Join button if virtual link exists
+
+Quick Actions
+
+Create Meeting
+
+Share Availability
+
+Edit Profile / Link
+
+Manage Integrations
+
+Availability Summary
+
+Simple weekly calendar view
+
+"Edit" button leads to availability page
+
+Side Navigation:
+
+Dashboard
+
+Calendar
+
+Meetings
+
+Integrations
+
+Settings
+
+Help
+
+📆 5. Create Meeting Page (/create)
+Purpose: Let users generate meetings with ease.
+
+Form:
+Title
+
+Date & Time (auto time zone adjustment based on browser/user)
+
+Duration
+
+Type: One-on-one or Group
+
+Invitees: Email fields (with auto-suggest if contacts are stored)
+
+Location: Zoom/Google Meet/Manual
+
+Notes (optional)
+
+Output:
+Once submitted, show:
+
+Meeting Summary Card
+
+“Copy Link” button
+
+“Add to Calendar” options
+
+Send Email Invites (if email is configured)
+
+📋 6. Meetings Page (/meetings)
+List of all upcoming and past meetings
+
+Filter by: Upcoming, Past, Today, Week
+
+Click on a meeting to view details/edit/cancel
+
+Visual status (Confirmed / Waiting / Canceled)
+
+🧰 7. Features Page (/features)
+Breakdown of each major feature with icons, examples, and animations:
+
+Time Zone Syncing
+
+Custom Meeting Links
+
+Group Scheduling
+
+Real-Time Availability
+
+Calendar & Video Call Integrations
+
+💰 8. Pricing Page (/pricing)
+Pricing Table:
+
+Free: 1 calendar, basic scheduling
+
+Pro ($12/mo): All integrations, unlimited links, custom branding
+
+Team ($30/user): Team dashboard, shared availability, priority support
+
+Feature comparison chart
+
+Monthly/Annual toggle
+
+CTA under each plan
+
+📖 9. Blog Page (/blog)
+Grid or list of blog articles
+
+Categories: Tips, Remote Work, Productivity
+
+Each post → /blog/article-slug
+
+📞 10. Contact Page (/contact)
+Contact form with subject selector
+
+Support email shown (e.g. support@tryschedly.com)
+
+Auto-reply message on submission
+
+🛡️ 11. Privacy Policy & Terms Pages
+/privacy & /terms
+
+Static text-based pages
+
+Required for trust and compliance
+
+🧠 Tech & UX Notes:
+Responsive First: Build for mobile & scale up
+
+Page Transitions: Use smooth animations to enhance onboarding and dashboard transitions
+
+User Session: Secure with token authentication
+
+State Handling: Save user onboarding progress in case of page refresh or drop-off
+
+Error Handling: On forms, API failures, integrations
+
